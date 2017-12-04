@@ -1,4 +1,6 @@
 # coding: utf-8
+# python v2.7
+# 通过马蜂窝网站的目的地‘百科'页面，查询到推荐的适合游玩时间。
 
 import re
 import urllib2
@@ -11,6 +13,7 @@ def setProxy():
     opener = urllib2.build_opener(proxy_handler)
     urllib2.install_opener(opener)
 
+# search the page of destination, return url
 def search(keyword):
     url = 'http://www.mafengwo.cn/search/s.php?q=' + keyword
     try:
@@ -35,6 +38,7 @@ def search(keyword):
             urls.append( re.findall(pattern, match[i])[0] )
         return name, urls
 
+# delete <xxx> in html, return words shown in web page.
 def strip(s):
     ret = ''
     i = 0
@@ -48,6 +52,7 @@ def strip(s):
     # print 'ret:', ret
     return ret
 
+# find referred time
 def findTime(urls):
     results = []
     for i in range(len(urls)):

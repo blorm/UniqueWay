@@ -1,5 +1,6 @@
 # coding: utf-8
-
+# python v2.7
+# 通过马蜂窝网站游记内容，搜索页面中与时间相关的关键词，如‘小时’，几点几分，推测出时间
 import urllib2
 import re
 
@@ -171,7 +172,7 @@ def timeSelect(slice):
 
 if __name__ == '__main__':
 
-    setProxy()
+    # setProxy()
 
     keyword = '清水寺'
     n = 2

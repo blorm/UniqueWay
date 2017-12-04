@@ -1,6 +1,6 @@
 ﻿这是一个查找景点游玩时间的小程序。
-·crawl_Query.py
+- crawl_Query.py
 	通过mafengwo.cn网站的查询功能，找到目的地的索引页面，在页面中直接获取建议的游玩时间，简单易行。
 	
-·crawl_Analysis.py
+- crawl_Analysis.py
 	在mafengwo.cn网站上查找目的地的所有游记，分析每一个游记中提出的时间，从而在大量数据中得出目的地的适宜停留时间。
